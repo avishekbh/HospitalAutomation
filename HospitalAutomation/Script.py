@@ -39,7 +39,8 @@ def indent(elem, level=0):
 
 def reader_writer_sender():
     flag = 0
-    
+    dataValue=""
+    dataValueSet=""
     for filename in glob.glob('*.csv'):
 	if "belle" in filename:
 	    try:
