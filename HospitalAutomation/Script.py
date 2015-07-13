@@ -41,7 +41,7 @@ def reader_writer_sender():
     flag = 0
     
     for filename in glob.glob('*.csv'):
-	if "peerless" in filename:
+	if "belle" in filename:
 	    try:
 		with open(filename, 'rb') as f:
 		    csvfile = csv.reader(f)
