@@ -39,15 +39,6 @@ def indent(elem, level=0):
 
 def reader_writer_sender():
     flag = 0
-    dataSetID=""
-    completeDate=""
-    period=""
-    orgUnitID=""
-    Total=""
-    Occupied=""
-    Left=0
-    dataValue=""
-    dataValueSet=""
     i=0
     for filename in glob.glob('*.csv'):
         if "belle" in filename:
@@ -71,7 +62,7 @@ def reader_writer_sender():
                             dataValue.set("dataElement", "z5PMfjP0eaU")
                             dataValue.set("value", row[2])
                             dataValue.set("dataElement", "jW4887vssOPK")
-                            print row[2]
+                            print "hi"
                             dataValue.set("value", int(row[1]) - int(row[2]))
                         elif i==2:
                             dataValue.set("dataElement", "U97U38U2eBj")
@@ -80,16 +71,16 @@ def reader_writer_sender():
                             dataValue.set("dataElement", "IAXlkWdrypq")
                             dataValue.set("value", row[2])
                             dataValue.set("dataElement", "MRCwMGNQOpg")
-                            print row[2]
+                            print "hello"
                             dataValue.set("value", int(row[1]) - int(row[2]))
-                        elif i==3:
+                        elif i==0:
                             dataValue.set("dataElement", "dToLU495hdD")
                             dataValue.set("value", row[1])
                             print row[1]
                             dataValue.set("dataElement", "HSSL9CQCEmu")
                             dataValue.set("value", row[2])
                             dataValue.set("dataElement", "rNdaHxXE13d")
-                            print row[2]
+                            print "heyya"
                             dataValue.set("value", int(row[1]) - int(row[2]))
                         i=i+1
             except:
