@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "Scripttest.py", line 102, in <module>
+    reader_writer_sender()
+  File "Scripttest.py", line 93, in reader_writer_sender
+    tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 820, in write
+    serialize(write, self._root, encoding, qnames, namespaces)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 939, in _serialize_xml
+    _serialize_xml(write, e, encoding, qnames, None)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 932, in _serialize_xml
+    v = _escape_attrib(v, encoding)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1092, in _escape_attrib
+    _raise_serialization_error(text)
+  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1052, in _raise_serialization_error
+    "cannot serialize %r (type %s)" % (text, type(text).__name__)
+TypeError: cannot serialize 2 (type int)
+ 
