@@ -40,11 +40,11 @@ def indent(elem, level=0):
 def reader_writer_sender():
     flag = 0
     for filename in glob.glob('*.csv'):
-        print filename
         if "peerless" in filename:
             try:
                 with open(filename, 'rb') as f:
                     i=0
+                    flag=0
                     csvfile = csv.reader(f)
                     dataValueSet = ET.Element("dataValueSet")
                     dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
@@ -83,6 +83,8 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "rNdaHxXE13d")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
+                        if row[0] == "#":
+                            flag=1
                         i=i+1
             except:
                 e = sys.exc_info()[0]
@@ -90,7 +92,8 @@ def reader_writer_sender():
         elif "belle" in filename:
             try:
                 with open(filename, 'rb') as f:
-                    i=0    
+                    i=0
+                    flag=0
                     csvfile = csv.reader(f)
                     dataValueSet = ET.Element("dataValueSet")
                     dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
@@ -129,20 +132,23 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "rNdaHxXE13d")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
+                            if row[0] == "#":
+                                flag=1
                         i=i+1
             except:
                 e = sys.exc_info()[0]
                 logger.debug("Error in reading files ::Message:: " + str(e))
-        indent(dataValueSet)
-        tree = ET.ElementTree(dataValueSet)
-        filename = filename[:-4]
-        xml_file = filename + ".xml"
-        tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
+        if flag == 1:
+            indent(dataValueSet)
+            tree = ET.ElementTree(dataValueSet)
+            filename = filename[:-4]
+            xml_file = filename + ".xml"
+            tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
 
 
         #TODO Add the hospital name in the logfile
 
-        os.system("curl -d @"+xml_file+" ""http://180.149.243.107:8080"" -H ""Content-Type:application/xml"" -u admin:district -v")
+        # os.system("curl -d @"+xml_file+" ""http://180.149.243.107:8080"" -H ""Content-Type:application/xml"" -u admin:district -v")
 
 
 if __name__ == '__main__':
