@@ -39,28 +39,29 @@ def indent(elem, level=0):
 
 def reader_writer_sender():
     flag = 0
-    i=0
     for filename in glob.glob('*.csv'):
+        print filename
         if "peerless" in filename:
             try:
                 with open(filename, 'rb') as f:
+                    i=0
                     csvfile = csv.reader(f)
                     dataValueSet = ET.Element("dataValueSet")
                     dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
-                    dataValueSet.set("dataSet", "o3Fdcxep773")
-                    dataValueSet.set("orgUnit", "C6ciemRdZvd")
+                    dataValueSet.set("dataSet", "C6ciemRdZvd")
+                    dataValueSet.set("orgUnit", "o3Fdcxep773")
                     for row in csvfile:
                         dataValueSet.set("completeDate", row[3])
                         dataValueSet.set("period", row[3][:8])
                         if i==1:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
-                            dataValue.set("dataElement", "SRYSn6kiUgs")
+                            dataValue.set("dataElement", "SRYSn6KiUgs")
                             dataValue.set("value", row[1])
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
-                            dataValue.set("dataElement", "z5PMfjP0eaU")
+                            dataValue.set("dataElement", "z5PMfjPOeaU")
                             dataValue.set("value", row[2])
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
-                            dataValue.set("dataElement", "jW4887vssOPK")
+                            dataValue.set("dataElement", "jW487vss0PK")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
                         elif i==2:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
@@ -89,6 +90,7 @@ def reader_writer_sender():
         elif "belle" in filename:
             try:
                 with open(filename, 'rb') as f:
+                    i=0    
                     csvfile = csv.reader(f)
                     dataValueSet = ET.Element("dataValueSet")
                     dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
@@ -99,13 +101,13 @@ def reader_writer_sender():
                         dataValueSet.set("period", row[3][:8])
                         if i==1:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
-                            dataValue.set("dataElement", "SRYSn6kiUgs")
+                            dataValue.set("dataElement", "SRYSn6KiUgs")
                             dataValue.set("value", row[1])
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
-                            dataValue.set("dataElement", "z5PMfjP0eaU")
+                            dataValue.set("dataElement", "z5PMfjPOeaU")
                             dataValue.set("value", row[2])
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
-                            dataValue.set("dataElement", "jW4887vssOPK")
+                            dataValue.set("dataElement", "jW487vss0PK")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
                         elif i==2:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
@@ -133,7 +135,7 @@ def reader_writer_sender():
                 logger.debug("Error in reading files ::Message:: " + str(e))
         indent(dataValueSet)
         tree = ET.ElementTree(dataValueSet)
-        filename = filename.rstrip(".csv")
+        filename = filename[:-4]
         xml_file = filename + ".xml"
         tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
 
