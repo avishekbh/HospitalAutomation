@@ -54,43 +54,50 @@ def reader_writer_sender():
                         dataValueSet.set("completeDate", row[3])
                         print row[3]
                         dataValueSet.set("period", row[3][:8])
-                        dataValue = ET.SubElement(dataValueSet, "dataValue")
                         if i==1:
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "SRYSn6kiUgs")
                             dataValue.set("value", row[1])
                             print row[1]
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "z5PMfjP0eaU")
                             dataValue.set("value", row[2])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "jW4887vssOPK")
                             print "hi"
                             dataValue.set("value", int(row[1]) - int(row[2]))
                         elif i==2:
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "U97U38U2eBj")
                             dataValue.set("value", row[1])
                             print row[1]
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "IAXlkWdrypq")
                             dataValue.set("value", row[2])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "MRCwMGNQOpg")
                             print "hello"
                             dataValue.set("value", int(row[1]) - int(row[2]))
                         elif i==0:
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "dToLU495hdD")
                             dataValue.set("value", row[1])
-                            print row[1]
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "HSSL9CQCEmu")
                             dataValue.set("value", row[2])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "rNdaHxXE13d")
                             print "heyya"
-                            dataValue.set("value", int(row[1]) - int(row[2]))
+                            dataValue.set("value", str(int(row[1]) - int(row[2])))
                         i=i+1
             except:
                 e = sys.exc_info()[0]
                 logger.debug("Error in reading files ::Message:: " + str(e))
-        indent(dataValueSet)
-        tree = ET.ElementTree(dataValueSet)
-        filename = filename.rstrip(".csv")
-        xml_file = filename + ".xml"
-        tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
+    indent(dataValueSet)
+    tree = ET.ElementTree(dataValueSet)
+    filename = filename.rstrip(".csv")
+    xml_file = filename + ".xml"
+    tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
 
 
         #TODO Add the hospital name in the logfile
