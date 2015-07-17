@@ -1,16 +1,44 @@
-Traceback (most recent call last):
-  File "Scripttest.py", line 109, in <module>
-    reader_writer_sender()
-  File "Scripttest.py", line 100, in reader_writer_sender
-    tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
-  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 820, in write
-    serialize(write, self._root, encoding, qnames, namespaces)
-  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 939, in _serialize_xml
-    _serialize_xml(write, e, encoding, qnames, None)
-  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 932, in _serialize_xml
-    v = _escape_attrib(v, encoding)
-  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1092, in _escape_attrib
-    _raise_serialization_error(text)
-  File "/usr/lib/python2.7/xml/etree/ElementTree.py", line 1052, in _raise_serialization_error
-    "cannot serialize %r (type %s)" % (text, type(text).__name__)
-TypeError: cannot serialize 3 (type int)
+* Rebuilt URL to: http://180.149.243.107:8080/
+* Hostname was NOT found in DNS cache
+*   Trying 180.149.243.107...
+* Connected to 180.149.243.107 (180.149.243.107) port 8080 (#0)
+* Server auth using Basic with user 'admin'
+> POST / HTTP/1.1
+> Authorization: Basic YWRtaW46ZGlzdHJpY3Q=
+> User-Agent: curl/7.35.0
+> Host: 180.149.243.107:8080
+> Accept: */*
+> Content-Type:application/xml
+> Content-Length: 665
+> 
+* upload completely sent off: 665 out of 665 bytes
+< HTTP/1.1 302 Moved Temporarily
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Location: http://180.149.243.107:8080/dhis-web-commons-about/redirect.action
+< Content-Length: 0
+< Date: Fri, 17 Jul 2015 16:30:38 GMT
+< 
+* Connection #0 to host 180.149.243.107 left intact
+* Rebuilt URL to: http://180.149.243.107:8080/
+* Hostname was NOT found in DNS cache
+*   Trying 180.149.243.107...
+* Connected to 180.149.243.107 (180.149.243.107) port 8080 (#0)
+* Server auth using Basic with user 'admin'
+> POST / HTTP/1.1
+> Authorization: Basic YWRtaW46ZGlzdHJpY3Q=
+> User-Agent: curl/7.35.0
+> Host: 180.149.243.107:8080
+> Accept: */*
+> Content-Type:application/xml
+> Content-Length: 189
+> 
+* upload completely sent off: 189 out of 189 bytes
+< HTTP/1.1 302 Moved Temporarily
+* Server Apache-Coyote/1.1 is not blacklisted
+< Server: Apache-Coyote/1.1
+< Location: http://180.149.243.107:8080/dhis-web-commons-about/redirect.action
+< Content-Length: 0
+< Date: Fri, 17 Jul 2015 16:30:38 GMT
+< 
+* Connection #0 to host 180.149.243.107 left intact
