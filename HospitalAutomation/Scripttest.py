@@ -83,7 +83,7 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "rNdaHxXE13d")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
-                        if row[0] == "#":
+                        elif row[0] == "#":
                             flag=1
                         i=i+1
             except:
@@ -132,7 +132,7 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "rNdaHxXE13d")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
-                            if row[0] == "#":
+                        elif row[0] == "#":
                                 flag=1
                         i=i+1
             except:
