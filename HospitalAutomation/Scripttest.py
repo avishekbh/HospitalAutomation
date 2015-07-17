@@ -41,43 +41,37 @@ def reader_writer_sender():
     flag = 0
     i=0
     for filename in glob.glob('*.csv'):
-        if "belle" in filename:
+        if "peerless" in filename:
             try:
                 with open(filename, 'rb') as f:
                     csvfile = csv.reader(f)
                     dataValueSet = ET.Element("dataValueSet")
                     dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
-                    dataValueSet.set("dataSet", "L3NTA4t5LPS")
-                    print "L3NTA4t5LPS"
-                    dataValueSet.set("orgUnit", "iNwzBcDqGsY")
+                    dataValueSet.set("dataSet", "o3Fdcxep773")
+                    dataValueSet.set("orgUnit", "C6ciemRdZvd")
                     for row in csvfile:
                         dataValueSet.set("completeDate", row[3])
-                        print row[3]
                         dataValueSet.set("period", row[3][:8])
                         if i==1:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "SRYSn6kiUgs")
                             dataValue.set("value", row[1])
-                            print row[1]
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "z5PMfjP0eaU")
                             dataValue.set("value", row[2])
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "jW4887vssOPK")
-                            print "hi"
-                            dataValue.set("value", int(row[1]) - int(row[2]))
+                            dataValue.set("value", str(int(row[1]) - int(row[2])))
                         elif i==2:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "U97U38U2eBj")
                             dataValue.set("value", row[1])
-                            print row[1]
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "IAXlkWdrypq")
                             dataValue.set("value", row[2])
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "MRCwMGNQOpg")
-                            print "hello"
-                            dataValue.set("value", int(row[1]) - int(row[2]))
+                            dataValue.set("value", str(int(row[1]) - int(row[2])))
                         elif i==0:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "dToLU495hdD")
@@ -87,22 +81,66 @@ def reader_writer_sender():
                             dataValue.set("value", row[2])
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "rNdaHxXE13d")
-                            print "heyya"
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
                         i=i+1
             except:
                 e = sys.exc_info()[0]
                 logger.debug("Error in reading files ::Message:: " + str(e))
-    indent(dataValueSet)
-    tree = ET.ElementTree(dataValueSet)
-    filename = filename.rstrip(".csv")
-    xml_file = filename + ".xml"
-    tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
+        elif "belle" in filename:
+            try:
+                with open(filename, 'rb') as f:
+                    csvfile = csv.reader(f)
+                    dataValueSet = ET.Element("dataValueSet")
+                    dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
+                    dataValueSet.set("dataSet", "L3NTA4t5LPS")
+                    dataValueSet.set("orgUnit", "iNwzBcDqGsY")
+                    for row in csvfile:
+                        dataValueSet.set("completeDate", row[3])
+                        dataValueSet.set("period", row[3][:8])
+                        if i==1:
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "SRYSn6kiUgs")
+                            dataValue.set("value", row[1])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "z5PMfjP0eaU")
+                            dataValue.set("value", row[2])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "jW4887vssOPK")
+                            dataValue.set("value", str(int(row[1]) - int(row[2])))
+                        elif i==2:
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "U97U38U2eBj")
+                            dataValue.set("value", row[1])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "IAXlkWdrypq")
+                            dataValue.set("value", row[2])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "MRCwMGNQOpg")
+                            dataValue.set("value", str(int(row[1]) - int(row[2])))
+                        elif i==0:
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "dToLU495hdD")
+                            dataValue.set("value", row[1])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "HSSL9CQCEmu")
+                            dataValue.set("value", row[2])
+                            dataValue = ET.SubElement(dataValueSet, "dataValue")
+                            dataValue.set("dataElement", "rNdaHxXE13d")
+                            dataValue.set("value", str(int(row[1]) - int(row[2])))
+                        i=i+1
+            except:
+                e = sys.exc_info()[0]
+                logger.debug("Error in reading files ::Message:: " + str(e))
+        indent(dataValueSet)
+        tree = ET.ElementTree(dataValueSet)
+        filename = filename.rstrip(".csv")
+        xml_file = filename + ".xml"
+        tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
 
 
         #TODO Add the hospital name in the logfile
 
-        #os.system("curl -d @"+xml_file+" ""http://180.149.243.107:8080"" -H ""Content-Type:application/xml"" -u admin:district -v")
+        os.system("curl -d @"+xml_file+" ""http://180.149.243.107:8080"" -H ""Content-Type:application/xml"" -u admin:district -v")
 
 
 if __name__ == '__main__':
