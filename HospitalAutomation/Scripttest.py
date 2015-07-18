@@ -1,10 +1,9 @@
-
 # Importing modules for reading CSV files, running the OS command CURL and writing to XML file
 import csv
 import os
 import sys
 import logging
-import glob # For reading only *.csv files in the directory
+import glob  # For reading only *.csv files in the directory
 import xml.etree.cElementTree as ET
 
 logging.basicConfig(level=logging.INFO)
@@ -17,6 +16,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 handler.setFormatter(formatter)
 
 logger.addHandler(handler)
+
 
 # Changing the directory to the directory where the CSV file is kept
 # os.chdir('/home/obhi/Documents')
@@ -43,8 +43,8 @@ def reader_writer_sender():
         if "peerless" in filename:
             try:
                 with open(filename, 'rb') as f:
-                    i=0
-                    flag=0
+                    i = 0
+                    flag = 0
                     csvfile = csv.reader(f)
                     dataValueSet = ET.Element("dataValueSet")
                     dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
@@ -53,7 +53,7 @@ def reader_writer_sender():
                     for row in csvfile:
                         dataValueSet.set("completeDate", row[3])
                         dataValueSet.set("period", row[3][:8])
-                        if i==1:
+                        if i == 1:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "SRYSn6KiUgs")
                             dataValue.set("value", row[1])
@@ -63,7 +63,7 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "jW487vss0PK")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
-                        elif i==2:
+                        elif i == 2:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "U97U38U2eBj")
                             dataValue.set("value", row[1])
@@ -73,7 +73,7 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "MRCwMGNQOpg")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
-                        elif i==0:
+                        elif i == 0:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "dToLU495hdD")
                             dataValue.set("value", row[1])
@@ -84,16 +84,16 @@ def reader_writer_sender():
                             dataValue.set("dataElement", "rNdaHxXE13d")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
                         elif row[0] == "#":
-                            flag=1
-                        i=i+1
+                            flag = 1
+                        i = i + 1
             except:
                 e = sys.exc_info()[0]
                 logger.debug("Error in reading files ::Message:: " + str(e))
         elif "belle" in filename:
             try:
                 with open(filename, 'rb') as f:
-                    i=0
-                    flag=0
+                    i = 0
+                    flag = 0
                     csvfile = csv.reader(f)
                     dataValueSet = ET.Element("dataValueSet")
                     dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
@@ -102,7 +102,7 @@ def reader_writer_sender():
                     for row in csvfile:
                         dataValueSet.set("completeDate", row[3])
                         dataValueSet.set("period", row[3][:8])
-                        if i==1:
+                        if i == 1:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "SRYSn6KiUgs")
                             dataValue.set("value", row[1])
@@ -112,7 +112,7 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "jW487vss0PK")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
-                        elif i==2:
+                        elif i == 2:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "U97U38U2eBj")
                             dataValue.set("value", row[1])
@@ -122,7 +122,7 @@ def reader_writer_sender():
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "MRCwMGNQOpg")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
-                        elif i==0:
+                        elif i == 0:
                             dataValue = ET.SubElement(dataValueSet, "dataValue")
                             dataValue.set("dataElement", "dToLU495hdD")
                             dataValue.set("value", row[1])
@@ -133,22 +133,20 @@ def reader_writer_sender():
                             dataValue.set("dataElement", "rNdaHxXE13d")
                             dataValue.set("value", str(int(row[1]) - int(row[2])))
                         elif row[0] == "#":
-                                flag=1
-                        i=i+1
+                            flag = 1
+                        i = i + 1
             except:
                 e = sys.exc_info()[0]
                 logger.debug("Error in reading files ::Message:: " + str(e))
-        if flag == 1:
-            indent(dataValueSet)
-            tree = ET.ElementTree(dataValueSet)
-            filename = filename[:-4]
-            xml_file = filename + ".xml"
-            tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
 
+        indent(dataValueSet)
+        tree = ET.ElementTree(dataValueSet)
+        filename = filename[:-4]
+        xml_file = filename + ".xml"
+        tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
+        os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
 
-        #TODO Add the hospital name in the logfile
-
-        # os.system("curl -d @"+xml_file+" ""http://180.149.243.107:8080"" -H ""Content-Type:application/xml"" -u admin:district -v")
+            # TODO Add the hospital name in the logfile
 
 
 if __name__ == '__main__':

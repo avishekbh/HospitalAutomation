@@ -19,7 +19,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 # Changing the directory to the directory where the CSV file is kept
-os.chdir('/home/obhi/Documents')
+#os.chdir('/home/obhi/Documents')
 
 def indent(elem, level=0):
     i = "\n" + level * "  "
