@@ -1,8 +1,0 @@
-Pilot Hospital,Hospital_ID,,,
-ICU_TYPE_SHORT,ICU_TYPE_LONG,Available_Bed,Total_Bed,Last_Update
-HDU,High Dependency Unit,4,8,2014-06-14_16:40:20
-ITU,Intensive Therapy Unit,7,12,2014-06-14_18:34:16
-CICU,Cardiac Intensive Care Unit,0,6,2014-06-14_08:23:10
-NICU,Neonatal Intensive Care Unit,3,6,2014-06-14_10:56:24
-ICU SDU,Intensive Care Stepdown Unit,3,6,2014-06-14_14:20:26
-NICU SDU,Neonatal Intensive Care Stepdown Unit,0,3,2014-06-14_15:30:26

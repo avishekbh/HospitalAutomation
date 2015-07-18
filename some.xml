@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<dataValueSet completeDate="date" dataSet="dataSetID" orgUnit="orgUnitID" period="period" xmlns="http://dhis2.org/schema/dxf/2.0">
-  <dataValue dataElement="dataElementID" value="1" />
-  <dataValue dataElement="dataElementID" value="2" />
-</dataValueSet>
