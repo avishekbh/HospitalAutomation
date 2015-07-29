@@ -51,63 +51,45 @@ def reader_writer_sender():
                       'ITU' : {'Total': "dToLU495hdD" , 'Reserved' : "WtlxTsYjvFO" , 'Occupied' : "HSSL9CQCEmu" ,'Available' : "rNdaHxXE13d"},
                       'ICCU' : {'Total': "SRYSn6KiUgs" , 'Reserved' : "ix8dVgFAqbv" , 'Occupied' : "z5PMfjPOeaU" ,'Available' : "jW487vss0PK"},
                       'ICU-I' : {'Total' : "JXGDUZUxfC1" , 'Reserved' : "XJnDJzbnxIS" , 'Occupied' : "VEV5SQ3o4Cl" ,'Available' : "OJFT7dJ6UoL"},
-                      'SCBU' : {'Total' : "B3zytjeLBkC" , 'Reserved' : "noOQUiGuYnC" , 'Occupied' : "dG9IYWemUNa" ,'Available' : "cZFZarClUkB"},
+                      'CTVS' : {'Total' : "B3zytjeLBkC" , 'Reserved' : "noOQUiGuYnC" , 'Occupied' : "dG9IYWemUNa" ,'Available' : "cZFZarClUkB"},
                       'NICU' : {'Total': "U97U38U2eBj" , 'Reserved' : "ys96ilizEcV" , 'Occupied' : "IAXlkWdrypq" ,'Available' : "MRCwMGNQOpg"},
-                      'CTVS' : {'Total' : "zDEFJIDCUjb" ,'Reserved' : "XqBI7j0SNWg" ,'Occupied' : "oF9zVVtGBz9" ,'Available' : "dCGFxlOVlwg"}
+                      'SCBU' : {'Total' : "zDEFJIDCUjb" ,'Reserved' : "XqBI7j0SNWg" ,'Occupied' : "oF9zVVtGBz9" ,'Available' : "dCGFxlOVlwg"}
                       }
     }
+    bed_info = ['Total', 'Reserved', 'Occupied', 'Available']
+
     for filename in glob.glob('*.csv'):
         try:
             with open(filename, 'rb') as f:
                 hos_name = "null"
-                bed_type = "null"
-                i = 0
-                k = 0
                 flag = 0
                 csvfile = csv.reader(f)
                 dataValueSet = ET.Element("dataValueSet")
                 dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
-                if "peerless" in filename:
-                    hos_name = "peerless"
-                    dataValueSet.set("dataSet", hospitals[hos_name]['hosp_dets']['dataSet'])
-                    dataValueSet.set("orgUnit", hospitals[hos_name]['hosp_dets']['orgUnit'])
-                elif "bellevue" in filename:
-                    hos_name = "bellevue"
-                    dataValueSet.set("dataSet", hospitals[hos_name]['hosp_dets']['dataSet'])
-                    dataValueSet.set("orgUnit", hospitals[hos_name]['hosp_dets']['orgUnit'])
+
+                for key in hospitals:
+                    if key in filename:
+                        hos_name=key
+                dataValueSet.set("dataSet", hospitals[hos_name]['hosp_dets']['dataSet'])
+                dataValueSet.set("orgUnit", hospitals[hos_name]['hosp_dets']['orgUnit'])
+
                 for row in csvfile:
+                    index = 1
                     if row[0] == "#":
                         flag = 1
                         continue
-                    if row[0] == "ICCU":
-                        bed_type="ICCU"
-                    elif row[0] == "NICU":
-                        bed_type="NICU"
-                    elif row[0] == "ITU":
-                        bed_type="ITU"
-                    elif row[0] == "CCU":
-                        bed_type="CCU"
-                    elif row[0] == "ICU-I":
-                        bed_type="ICU-I"
-                    elif row[0] == "CTVS":
-                        bed_type="CTVS"
-                    elif row[0] == "SCBU":
-                        bed_type="SCBU"
+                    bed_type = row[0]
                     dataValueSet.set("completeDate", row[4])
                     dataValueSet.set("period", row[4][:8])
-                    dataValue = ET.SubElement(dataValueSet, "dataValue")
-                    dataValue.set("dataElement", hospitals[hos_name][bed_type]['Total'])
-                    dataValue.set("value", row[1])
-                    dataValue = ET.SubElement(dataValueSet, "dataValue")
-                    dataValue.set("dataElement", hospitals[hos_name][bed_type]['Reserved'])
-                    dataValue.set("value", row[2])
-                    dataValue = ET.SubElement(dataValueSet, "dataValue")
-                    dataValue.set("dataElement", hospitals[hos_name][bed_type]['Occupied'])
-                    dataValue.set("value", row[3])
-                    dataValue = ET.SubElement(dataValueSet, "dataValue")
-                    dataValue.set("dataElement", hospitals[hos_name][bed_type]['Available'])
-                    dataValue.set("value", str(int(row[1]) - int(row[2]) - int(row[3])))
-                    k += 1
+                    for b in bed_info:
+                        dataValue = ET.SubElement(dataValueSet, "dataValue")
+                        dataValue.set("dataElement", hospitals[hos_name][bed_type][b])
+                        if index == 4:
+                            dataValue.set("value", str(int(row[1]) - int(row[2]) - int(row[3])))
+                            break
+                        else:
+                            dataValue.set("value", row[index])
+                        index += 1
         except:
             e = sys.exc_info()[0]
             logger.debug("Error in reading files ::Message:: " + str(e))
