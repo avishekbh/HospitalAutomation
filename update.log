@@ -236,3 +236,49 @@
 2015-07-29 22:48:29,644 - __main__ - INFO - Hospital Name : bellevue
 2015-07-29 22:48:29,644 - __main__ - INFO - Total beds less than Reserved and Occupied
 2015-07-29 22:48:29,644 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:50:35,256 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:50:35,256 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 22:50:35,256 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:50:35,256 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:50:35,256 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:50:54,379 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:50:54,546 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:50:54,546 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:50:54,547 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:08:22,130 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:08:22,130 - __main__ - INFO - Bed count not in integer values
+2015-07-29 23:08:22,130 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:08:22,131 - __main__ - INFO - Bed count not in integer values
+2015-07-29 23:08:22,131 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:09:12,490 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:09:12,490 - __main__ - INFO - Bed count not in integer valuespeerless ICCU
+2015-07-29 23:09:12,490 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:09:12,490 - __main__ - INFO - Bed count not in integer valuesbellevue ICCU
+2015-07-29 23:09:12,490 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:09:31,126 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:09:31,126 - __main__ - INFO - Bed count not in integer values peerless ICCU
+2015-07-29 23:09:31,127 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:09:31,127 - __main__ - INFO - Bed count not in integer values bellevue ICCU
+2015-07-29 23:09:31,127 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:11:03,816 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:11:03,816 - __main__ - INFO - Bed count not in integer values peerless ICCU
+2015-07-29 23:11:03,816 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:11:03,817 - __main__ - INFO - Bed count not in integer values bellevue ICCU
+2015-07-29 23:11:03,817 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:12:00,288 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:12:00,288 - __main__ - INFO - Bed count not in integer values peerless ICCU
+2015-07-29 23:12:00,288 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:12:00,288 - __main__ - INFO - Bed count not in integer values bellevue ICCU
+2015-07-29 23:12:00,289 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:12:59,392 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:12:59,393 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:12:59,393 - __main__ - INFO - Bed count not in integer values
+2015-07-29 23:12:59,393 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:14:32,737 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:14:32,738 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:14:32,738 - __main__ - INFO - Bed count not in integer values, hosp name : bellevue bed_type : ICCU
+2015-07-29 23:14:32,738 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:16:03,074 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:16:03,074 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:16:03,074 - __main__ - INFO - Bed count not in integer values, hosp name : bellevue bed_type : ICCU
+2015-07-29 23:16:03,075 - __main__ - INFO - The filename sent by hospital is not valid : new

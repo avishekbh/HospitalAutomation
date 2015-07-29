@@ -70,6 +70,13 @@ def checkData(csvfile, hos_name):
     for row in csvfile:
         if row[0] == "#":
             continue
+        try:
+            int(row[1])
+            int(row[2])
+            int(row[3])
+        except ValueError:
+            logger.info("Bed count not in integer values, hosp name : "+hos_name+" bed_type : "+row[0])
+            return 0
         for r in row:
             if r == '':
                 logger.info("File does not contain whole data, bed_type = "+row[0])
@@ -147,7 +154,7 @@ def reader_writer_sender():
             filename = filename[:-4]
             xml_file = filename + ".xml"
             tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
-            os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
+            #os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
         else:
             logger.info("Corrupt file, cannot be processed")
 
