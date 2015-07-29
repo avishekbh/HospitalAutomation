@@ -2,6 +2,7 @@ __author__ = 'obhi'
 # Importing modules for reading CSV files, running the OS command CURL and writing to XML file
 import csv
 import sys
+import os
 import logging
 import glob  # For reading only *.csv files in the directory
 import xml.etree.cElementTree as ET
@@ -65,28 +66,37 @@ def indent(elem, level=0):
 
 
 def checkData(csvfile, hos_name):
+    p=[]
     for row in csvfile:
         if row[0] == "#":
             continue
-        if len(row) < 4:
-            logger.info("File does not contain whole data, bed_type = ")
+        try:
+            int(row[1])
+            int(row[2])
+            int(row[3])
+        except ValueError:
+            logger.info("Bed count not in integer values, hosp name : "+hos_name+" bed_type : "+row[0])
             return 0
+        for r in row:
+            if r == '':
+                logger.info("File does not contain whole data, bed_type = "+row[0])
+                return 0
         if int(row[1]) < (int(row[2]) + int(row[3])):
             logger.info("Total beds less than Reserved and Occupied")
             return 0
         if int(row[1]) < 0 or int(row[2]) < 0 or int(row[3]) < 0:
             logger.info("Bed count is negative")
             return 0
-        try:
-            a = int(row[1])
-            b = int(row[2])
-            c = int(row[3])
-        except ValueError:
-            logger.info("Bed count not in integer values")
-            return 0
         if row[0].upper() not in hospitals[hos_name]:
-            logger.info("This type of bed doesnot exist for ")
+            logger.info("This type of bed doesnot exist for " + hos_name)
             return 0
+        p.append(row[0])
+    b=list(set(p))
+    p.sort()
+    b.sort()
+    if p != b:
+        logger.info("Duplicates in bed_type")
+        return 0
     return 1
 
 
@@ -115,7 +125,6 @@ def reader_writer_sender():
                     continue
                 with open(filename, 'rb') as fl:
                     csvf = csv.reader(fl)
-                    print hos_name
                     flag1 = checkData(csvf, hos_name)
                 if flag1 == 0:
                     continue

@@ -47,3 +47,238 @@
 2015-07-29 16:47:46,751 - __main__ - INFO - Hospital Name : bellevue
 2015-07-29 16:47:46,751 - __main__ - INFO - This type of bed doesnot exist for 
 2015-07-29 16:47:46,751 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:53:56,921 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:53:56,922 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:53:56,922 - __main__ - INFO - This type of bed doesnot exist for 
+2015-07-29 16:53:56,922 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:54:18,517 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:54:18,518 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:54:18,518 - __main__ - INFO - This type of bed doesnot exist for 
+2015-07-29 16:54:18,518 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:55:51,732 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:55:51,733 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:55:51,733 - __main__ - INFO - This type of bed doesnot exist for bellevue
+2015-07-29 16:55:51,733 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:56:58,152 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:56:58,153 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:56:58,153 - __main__ - INFO - This type of bed doesnot exist for bellevue
+2015-07-29 16:56:58,153 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:00:27,010 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:00:27,010 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:00:27,010 - __main__ - INFO - This type of bed doesnot exist for bellevue
+2015-07-29 17:00:27,011 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:01:31,468 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:01:31,469 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:01:31,469 - __main__ - INFO - This type of bed doesnot exist for bellevue
+2015-07-29 17:01:31,469 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:04:04,784 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:04:04,785 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:04:04,785 - __main__ - INFO - File does not contain whole data, bed_type = ICCU
+2015-07-29 17:04:04,785 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:06:02,330 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:06:02,331 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:06:02,331 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.ValueError'>
+2015-07-29 17:06:02,331 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:06:02,331 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:41:07,215 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:41:07,215 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:41:07,215 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.ValueError'>
+2015-07-29 17:41:07,215 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:41:07,216 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:43:04,187 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:43:04,188 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:43:04,188 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.ValueError'>
+2015-07-29 17:43:04,188 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:43:04,188 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:43:40,497 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:43:40,497 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:43:40,498 - __main__ - INFO - This type of bed doesnot exist for bellevue
+2015-07-29 17:43:40,498 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:43:56,977 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:43:56,977 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:43:56,978 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:47:50,073 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.TypeError'>
+2015-07-29 17:47:50,073 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:47:50,073 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.TypeError'>
+2015-07-29 17:47:50,073 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:47:50,073 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.TypeError'>
+2015-07-29 17:47:50,073 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:54:16,822 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:54:16,822 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.AttributeError'>
+2015-07-29 17:54:16,822 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:54:16,822 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:54:16,823 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.AttributeError'>
+2015-07-29 17:54:16,823 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:54:16,823 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:55:54,818 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:55:54,819 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:55:54,820 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:56:13,311 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:56:13,311 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:56:13,312 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:56:29,903 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:56:29,904 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:56:29,904 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:56:49,022 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:56:49,023 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:56:49,024 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:57:04,341 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:57:04,341 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:57:04,342 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:57:15,386 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:57:15,387 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:57:15,388 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:57:34,825 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:57:34,826 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:57:34,827 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:57:52,063 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:57:52,063 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:57:52,064 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:58:06,002 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:58:06,003 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:58:06,004 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:58:17,638 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:58:17,638 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:58:17,639 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 17:58:24,088 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 17:58:24,088 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.AttributeError'>
+2015-07-29 17:58:24,088 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:58:24,088 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 17:58:24,088 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.AttributeError'>
+2015-07-29 17:58:24,088 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 17:58:24,088 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:02:44,096 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:02:44,096 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:02:44,097 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:02:44,097 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:02:44,097 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:03:13,503 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:03:13,503 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:03:13,504 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:03:13,504 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:03:13,504 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:03:48,929 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:03:48,929 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:03:48,929 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:03:48,930 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:03:48,930 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:03:56,409 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:03:56,409 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:03:56,409 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:03:56,410 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:03:56,410 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:04:27,781 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:04:27,781 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:04:27,781 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:04:27,781 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:04:27,781 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:04:58,832 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:04:58,833 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:04:58,833 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:04:58,833 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:04:58,833 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:05:30,843 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:05:30,843 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:05:30,843 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:05:30,844 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 18:05:30,844 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:06:39,285 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:06:39,286 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:06:39,287 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:10:41,775 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:10:41,775 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:10:41,776 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 18:37:23,076 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 18:37:23,077 - __main__ - INFO - Bed count not in integer values
+2015-07-29 18:37:23,077 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 18:37:23,077 - __main__ - INFO - Bed count not in integer values
+2015-07-29 18:37:23,077 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 19:34:50,577 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 19:34:50,577 - __main__ - INFO - Bed count not in integer values
+2015-07-29 19:34:50,577 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 19:34:50,577 - __main__ - INFO - Bed count not in integer values
+2015-07-29 19:34:50,577 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:30:30,206 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:30:30,206 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:30:30,207 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:30:52,271 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:31:51,912 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:31:52,108 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:31:52,730 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:32:59,005 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:32:59,179 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:32:59,180 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:32:59,180 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:34:01,214 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:34:01,381 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:34:01,381 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:34:01,381 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:35:58,287 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:35:58,288 - __main__ - INFO - File does not contain whole data, bed_type = ICCU
+2015-07-29 22:35:58,288 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:35:58,288 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:35:58,288 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:36:37,516 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:36:37,516 - __main__ - INFO - This type of bed doesnot exist for peerless
+2015-07-29 22:36:37,516 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:36:37,516 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:36:37,516 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:37:04,800 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:37:05,004 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:37:05,005 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:37:05,005 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:38:50,672 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:38:50,673 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:38:50,673 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:38:50,673 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:48:29,644 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:48:29,644 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 22:48:29,644 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:48:29,644 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:48:29,644 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:50:35,256 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:50:35,256 - __main__ - INFO - Duplicates in bed_type
+2015-07-29 22:50:35,256 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:50:35,256 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:50:35,256 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 22:50:54,379 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 22:50:54,546 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 22:50:54,546 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 22:50:54,547 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:08:22,130 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:08:22,130 - __main__ - INFO - Bed count not in integer values
+2015-07-29 23:08:22,130 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:08:22,131 - __main__ - INFO - Bed count not in integer values
+2015-07-29 23:08:22,131 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:09:12,490 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:09:12,490 - __main__ - INFO - Bed count not in integer valuespeerless ICCU
+2015-07-29 23:09:12,490 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:09:12,490 - __main__ - INFO - Bed count not in integer valuesbellevue ICCU
+2015-07-29 23:09:12,490 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:09:31,126 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:09:31,126 - __main__ - INFO - Bed count not in integer values peerless ICCU
+2015-07-29 23:09:31,127 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:09:31,127 - __main__ - INFO - Bed count not in integer values bellevue ICCU
+2015-07-29 23:09:31,127 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:11:03,816 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:11:03,816 - __main__ - INFO - Bed count not in integer values peerless ICCU
+2015-07-29 23:11:03,816 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:11:03,817 - __main__ - INFO - Bed count not in integer values bellevue ICCU
+2015-07-29 23:11:03,817 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:12:00,288 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:12:00,288 - __main__ - INFO - Bed count not in integer values peerless ICCU
+2015-07-29 23:12:00,288 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:12:00,288 - __main__ - INFO - Bed count not in integer values bellevue ICCU
+2015-07-29 23:12:00,289 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:12:59,392 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:12:59,393 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:12:59,393 - __main__ - INFO - Bed count not in integer values
+2015-07-29 23:12:59,393 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:14:32,737 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:14:32,738 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:14:32,738 - __main__ - INFO - Bed count not in integer values, hosp name : bellevue bed_type : ICCU
+2015-07-29 23:14:32,738 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 23:16:03,074 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 23:16:03,074 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 23:16:03,074 - __main__ - INFO - Bed count not in integer values, hosp name : bellevue bed_type : ICCU
+2015-07-29 23:16:03,075 - __main__ - INFO - The filename sent by hospital is not valid : new
