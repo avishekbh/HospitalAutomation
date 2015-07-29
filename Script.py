@@ -70,8 +70,11 @@ def reader_writer_sender():
                 for key in hospitals:
                     if key in filename:
                         hos_name=key
-                dataValueSet.set("dataSet", hospitals[hos_name]['hosp_dets']['dataSet'])
-                dataValueSet.set("orgUnit", hospitals[hos_name]['hosp_dets']['orgUnit'])
+                        dataValueSet.set("dataSet", hospitals[hos_name]['hosp_dets']['dataSet'])
+                        dataValueSet.set("orgUnit", hospitals[hos_name]['hosp_dets']['orgUnit'])
+                    else:
+                        logger.debug("The filename sent by hospital does not exist")
+                        quit()
 
                 for row in csvfile:
                     index = 1
