@@ -40,21 +40,31 @@ def indent(elem, level=0):
 
 def reader_writer_sender():
     flag = 0
-    hospitals =   {
-        'peerless' : {'hosp_dets' : {'dataSet':"C6ciemRdZvd", 'orgUnit': "o3Fdcxep773"},
-                      'ITU' : {'Total': "dToLU495hdD" , 'Reserved' : "WtlxTsYjvFO" , 'Occupied' : "HSSL9CQCEmu" ,'Available' : "rNdaHxXE13d"},
-                      'ICCU' : {'Total': "SRYSn6KiUgs" , 'Reserved' : "ix8dVgFAqbv" , 'Occupied' : "z5PMfjPOeaU" ,'Available' : "jW487vss0PK"},
-                      'NICU' : {'Total': "U97U38U2eBj" , 'Reserved' : "ys96ilizEcV" , 'Occupied' : "IAXlkWdrypq" ,'Available' : "MRCwMGNQOpg"},
-                      },
-        'bellevue' : {'hosp_dets' : {'dataSet':"L3NTA4t5LPS", 'orgUnit': "iNwzBcDqGsY"},
-                      'CCU' : {'Total' : "G8RVMxO86Qc" , 'Reserved' : "GgULTaSUMBS" ,'Occupied' : "MhRIygQBvbx" , 'Available' : "brszB1hGZeG"},
-                      'ITU' : {'Total': "dToLU495hdD" , 'Reserved' : "WtlxTsYjvFO" , 'Occupied' : "HSSL9CQCEmu" ,'Available' : "rNdaHxXE13d"},
-                      'ICCU' : {'Total': "SRYSn6KiUgs" , 'Reserved' : "ix8dVgFAqbv" , 'Occupied' : "z5PMfjPOeaU" ,'Available' : "jW487vss0PK"},
-                      'ICU-I' : {'Total' : "JXGDUZUxfC1" , 'Reserved' : "XJnDJzbnxIS" , 'Occupied' : "VEV5SQ3o4Cl" ,'Available' : "OJFT7dJ6UoL"},
-                      'CTVS' : {'Total' : "B3zytjeLBkC" , 'Reserved' : "noOQUiGuYnC" , 'Occupied' : "dG9IYWemUNa" ,'Available' : "cZFZarClUkB"},
-                      'NICU' : {'Total': "U97U38U2eBj" , 'Reserved' : "ys96ilizEcV" , 'Occupied' : "IAXlkWdrypq" ,'Available' : "MRCwMGNQOpg"},
-                      'SCBU' : {'Total' : "zDEFJIDCUjb" ,'Reserved' : "XqBI7j0SNWg" ,'Occupied' : "oF9zVVtGBz9" ,'Available' : "dCGFxlOVlwg"}
-                      }
+    hospitals = {
+        'peerless': {'hosp_dets': {'dataSet': "C6ciemRdZvd", 'orgUnit': "o3Fdcxep773"},
+                     'ITU': {'Total': "dToLU495hdD", 'Reserved': "WtlxTsYjvFO", 'Occupied': "HSSL9CQCEmu",
+                             'Available': "rNdaHxXE13d"},
+                     'ICCU': {'Total': "SRYSn6KiUgs", 'Reserved': "ix8dVgFAqbv", 'Occupied': "z5PMfjPOeaU",
+                              'Available': "jW487vss0PK"},
+                     'NICU': {'Total': "U97U38U2eBj", 'Reserved': "ys96ilizEcV", 'Occupied': "IAXlkWdrypq",
+                              'Available': "MRCwMGNQOpg"},
+                     },
+        'bellevue': {'hosp_dets': {'dataSet': "L3NTA4t5LPS", 'orgUnit': "iNwzBcDqGsY"},
+                     'CCU': {'Total': "G8RVMxO86Qc", 'Reserved': "GgULTaSUMBS", 'Occupied': "MhRIygQBvbx",
+                             'Available': "brszB1hGZeG"},
+                     'ITU': {'Total': "dToLU495hdD", 'Reserved': "WtlxTsYjvFO", 'Occupied': "HSSL9CQCEmu",
+                             'Available': "rNdaHxXE13d"},
+                     'ICCU': {'Total': "SRYSn6KiUgs", 'Reserved': "ix8dVgFAqbv", 'Occupied': "z5PMfjPOeaU",
+                              'Available': "jW487vss0PK"},
+                     'ICU-I': {'Total': "JXGDUZUxfC1", 'Reserved': "XJnDJzbnxIS", 'Occupied': "VEV5SQ3o4Cl",
+                               'Available': "OJFT7dJ6UoL"},
+                     'CTVS': {'Total': "B3zytjeLBkC", 'Reserved': "noOQUiGuYnC", 'Occupied': "dG9IYWemUNa",
+                              'Available': "cZFZarClUkB"},
+                     'NICU': {'Total': "U97U38U2eBj", 'Reserved': "ys96ilizEcV", 'Occupied': "IAXlkWdrypq",
+                              'Available': "MRCwMGNQOpg"},
+                     'SCBU': {'Total': "zDEFJIDCUjb", 'Reserved': "XqBI7j0SNWg", 'Occupied': "oF9zVVtGBz9",
+                              'Available': "dCGFxlOVlwg"}
+                     }
     }
     bed_info = ['Total', 'Reserved', 'Occupied', 'Available']
 
@@ -69,7 +79,7 @@ def reader_writer_sender():
 
                 for key in hospitals:
                     if key in filename:
-                        hos_name=key
+                        hos_name = key
                         dataValueSet.set("dataSet", hospitals[hos_name]['hosp_dets']['dataSet'])
                         dataValueSet.set("orgUnit", hospitals[hos_name]['hosp_dets']['orgUnit'])
                     else:
@@ -102,7 +112,8 @@ def reader_writer_sender():
             filename = filename[:-4]
             xml_file = filename + ".xml"
             tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
-            os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
+            os.system(
+                "curl -d @" + xml_file + " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
 
             # TODO Add the hospital name in the logfile
 
