@@ -1,0 +1,49 @@
+2015-07-29 16:23:47,399 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:23:47,400 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:25:47,183 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:25:47,184 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:25:47,185 - __main__ - INFO - The filename sent by hospital does not exist
+2015-07-29 16:26:18,945 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:26:18,946 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:26:18,946 - __main__ - INFO - The filename sent by hospital does not existnew.csv
+2015-07-29 16:29:25,731 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:29:25,732 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:29:25,732 - __main__ - INFO - The filename sent by hospital is not valid : new.
+2015-07-29 16:29:35,185 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:29:35,186 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:29:35,187 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:40:39,975 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:40:39,976 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:40:39,976 - __main__ - INFO - Bed count is negative
+2015-07-29 16:40:39,976 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:41:21,350 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:41:21,351 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:41:21,351 - __main__ - INFO - Total beds less than Reserved and Occupied
+2015-07-29 16:41:21,351 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:43:01,222 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:43:01,222 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:43:01,222 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.ValueError'>
+2015-07-29 16:43:01,222 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 16:43:01,223 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:43:53,651 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:43:53,651 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:43:53,651 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.ValueError'>
+2015-07-29 16:43:53,651 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 16:43:53,652 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:45:59,727 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:45:59,727 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:45:59,728 - __main__ - INFO - Error in reading files ::Message:: <type 'exceptions.ValueError'>
+2015-07-29 16:45:59,728 - __main__ - INFO - Corrupt file, cannot be processed
+2015-07-29 16:45:59,728 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:46:32,089 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:46:32,090 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:46:32,090 - __main__ - INFO - This type of bed doesnot exist for 
+2015-07-29 16:46:32,090 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:47:14,795 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:47:14,796 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:47:14,796 - __main__ - INFO - This type of bed doesnot exist for 
+2015-07-29 16:47:14,796 - __main__ - INFO - The filename sent by hospital is not valid : new
+2015-07-29 16:47:46,750 - __main__ - INFO - Hospital Name : peerless
+2015-07-29 16:47:46,751 - __main__ - INFO - Hospital Name : bellevue
+2015-07-29 16:47:46,751 - __main__ - INFO - This type of bed doesnot exist for 
+2015-07-29 16:47:46,751 - __main__ - INFO - The filename sent by hospital is not valid : new
