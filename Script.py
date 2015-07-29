@@ -147,7 +147,7 @@ def reader_writer_sender():
             filename = filename[:-4]
             xml_file = filename + ".xml"
             tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
-            #os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
+            os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
         else:
             logger.info("Corrupt file, cannot be processed")
 
