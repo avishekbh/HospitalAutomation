@@ -136,7 +136,7 @@ def reader_writer_sender():
                             xml_file_name = filename[:-4]
                             xml_file = xml_file_name + ".xml"
                             tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
-                            # os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
+                            os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
                             logger.info("Successfully uploaded data of "+hos_name.upper()+" to server at " + str(datetime.datetime.now()))
                 else:
                     logger.info("The filename sent by hospital is not valid : " + filename)
