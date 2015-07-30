@@ -3,6 +3,7 @@ __author__ = 'obhi'
 import csv
 import sys
 import os
+import datetime
 import logging
 import glob  # For reading only *.csv files in the directory
 import xml.etree.cElementTree as ET
@@ -68,6 +69,16 @@ def indent(elem, level=0):
 def checkData(csvfile, hos_name):
     p = []
     for row in csvfile:
+        if len(row) != 5:
+            logger.info("Corrupt file. Either all fields not filled or excess data.")
+            return False
+        if row[0].upper() not in hospitals[hos_name]:
+            logger.info("This type of bed doesnot exist for " + hos_name + "; bed_type = "+row[0])
+            return False
+        for r in row:
+            if r == '':
+                logger.info("File does not contain whole data, bed_type = " + row[0])
+                return False
         try:
             int(row[1])
             int(row[2])
@@ -75,18 +86,11 @@ def checkData(csvfile, hos_name):
         except ValueError:
             logger.info("Bed count not in integer values, hosp name : " + hos_name + " bed_type : " + row[0])
             return False
-        for r in row:
-            if r == '':
-                logger.info("File does not contain whole data, bed_type = " + row[0])
-                return False
         if int(row[1]) < (int(row[2]) + int(row[3])):
             logger.info("Total beds less than Reserved and Occupied")
             return False
         if int(row[1]) < 0 or int(row[2]) < 0 or int(row[3]) < 0:
             logger.info("Bed count is negative")
-            return False
-        if row[0].upper() not in hospitals[hos_name]:
-            logger.info("This type of bed doesnot exist for " + hos_name)
             return False
         p.append(row[0])
     b = list(set(p))
@@ -104,11 +108,11 @@ def reader_writer_sender():
         try:
             with open(filename, 'rb') as f:
                 csvfile = csv.reader(f)
-                dataValueSet = ET.Element("dataValueSet")
-                dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
                 if filename.lower()[:-4] in hospitals:
+                    dataValueSet = ET.Element("dataValueSet")
+                    dataValueSet.set("xmlns", "http://dhis2.org/schema/dxf/2.0")
                     hos_name = filename.lower()[:-4]
-                    print ("Processing " + hos_name)
+                    logger.info("Processing " + hos_name+ "; Started at "+str(datetime.datetime.now()))
                     dataValueSet.set("dataSet", hospitals[hos_name]['hosp_dets']['dataSet'])
                     dataValueSet.set("orgUnit", hospitals[hos_name]['hosp_dets']['orgUnit'])
                     with open(filename, 'rb') as fl:
@@ -133,6 +137,7 @@ def reader_writer_sender():
                             xml_file = xml_file_name + ".xml"
                             tree.write(xml_file, xml_declaration=True, encoding='utf-8', method="xml")
                             # os.system("curl -d @" +xml_file+ " ""http://180.149.243.107:8080/api/dataValueSets"" -H ""Content-Type:application/xml"" -u admin:district -v")
+                            logger.info("Successfully uploaded data of "+hos_name.upper()+" to server at " + str(datetime.datetime.now()))
                 else:
                     logger.info("The filename sent by hospital is not valid : " + filename)
                     continue
