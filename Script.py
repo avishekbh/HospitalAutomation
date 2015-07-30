@@ -84,7 +84,7 @@ def checkData(csvfile, hos_name):
             int(row[2])
             int(row[3])
         except ValueError:
-            logger.info("Bed count not in integer values, hosp name : " + hos_name + " bed_type : " + row[0])
+            logger.info("Bed count not in integer values, hosp name : " + hos_name + "; bed_type : " + row[0])
             return False
         if int(row[1]) < (int(row[2]) + int(row[3])):
             logger.info("Total beds less than Reserved and Occupied")
@@ -92,7 +92,7 @@ def checkData(csvfile, hos_name):
         if int(row[1]) < 0 or int(row[2]) < 0 or int(row[3]) < 0:
             logger.info("Bed count is negative")
             return False
-        p.append(row[0])
+        p.append(row[0].upper())
     b = list(set(p))
     p.sort()
     b.sort()
